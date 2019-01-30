@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello World</title>
+    </head>
+        <body>
+            <h1>Gaming can be relaxing, shall we find out.....</h1>
+            <ul>
+                <li>Hello, what is your name?</li>
+                <li>what is your favorite video game?</li>
+                <li>What is your favorite thing about that game?</li>
+                <li>Would love to relive that part of your life again, please answer Y or N?</li>
+            </ul>
+            
+            <script>
+                var name = prompt('Hello, what is your name?');
+                console.log(name);
+
+                var answer = prompt('So ' + name + ' ,what is your favorite video game?');
+                console.log(answer);
+
+                var answer = prompt( answer + ', thats a great game. I might of tried that game in my youth. What is your favorite thing about ' + answer);
+                console.log(answer);
+
+                var answer = prompt(answer + '. Thats a great reason, would love to relive that part of your life again, please answer Y or N?');
+                console.log(answer);
+
+               if (answer === 'Y') {
+                   alert(' Thats Awesome, go play it again.');
+                } else {
+                   alert('Man, then it must of not been that great of a game!');
+                }
+
+
+            </script>
+
+        </body>
+</html>
