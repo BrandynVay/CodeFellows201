@@ -1,0 +1,51 @@
+html {
+    background-color: #d5d9dd;
+}
+
+body{
+    width: 1650px;
+    height: 100%;
+}
+
+header {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    font-size: 20px;
+    display: block;
+    font-family: 'Lobster Two', Arial;
+    text-align: center;
+    border: 2px solid black;
+}
+
+ul{
+    color: black;
+    background-color: #d5d9dd;
+    font-size: 25px;
+
+}
+
+section {
+    background-color: white;
+    font-size: 16px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid black;
+}
+
+aside {
+    width: 17%;
+    display: inline-block;
+    background-color: none;
+    padding: none;
+    min-height: 100%;
+}
+
+header img{
+    float: left;
+}
+
+
+
+
