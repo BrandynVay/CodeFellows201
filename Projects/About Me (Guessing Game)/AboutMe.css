@@ -21,11 +21,45 @@ header {
 ul{
     color: black;
     background-color: #d5d9dd;
-    font-size: 25px;
+    font-size: 19px;
 
 }
 
-section {
+ol{
+    color: black;
+    background-color: #d5d9dd;
+    font-size: 20px;
+
+}
+
+.zig-zag{
+    border: none;
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 40px;
+    background: linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -20px 0,
+    linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -20px 0,
+    linear-gradient(315deg, #ECEDDC 25%, transparent 25%),
+    linear-gradient(45deg, #ECEDDC 25%, transparent 25%);
+    background-size: 40px 40px;
+    background-color: #EC173A;
+}
+
+h2{
+    color: black;
+    background-color: white;
+    padding: 10px;
+    font-size: 20px;
+    display: block;
+    font-family: 'Lobster Two', Arial;
+    border: 2px solid black;
+    text-align: left;
+
+}
+
+footer {
     background-color: white;
     font-size: 19px;
     width: 100%;
@@ -36,6 +70,7 @@ section {
 
 header img{
     float: left;
+    width: 11%;
 }
 
 

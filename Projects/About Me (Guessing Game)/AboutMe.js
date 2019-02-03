@@ -35,8 +35,7 @@ while (lowerCaseDrawing !== 'drawing'){
     lowerCaseDrawing = drawing.toLowerCase();
 }
 
-var snowboarding = prompt (drawing 
-    + ', your doing great. I wonder if you might know my favorite sport to do outside? I\'ll give you a hint, it has to do with the snow.');
+var snowboarding = prompt ( ', your doing great. I wonder if you might know my favorite sport to do outside? I\'ll give you a hint, it has to do with the snow.');
 console.log (snowboarding);
 
 var lowerCaseSnowboarding = snowboarding.toLowerCase();
@@ -47,8 +46,41 @@ while (lowerCaseSnowboarding !== 'snowboarding'){
     lowerCaseSnowboarding = snowboarding.toLowerCase();
 }
 
-var end = prompt (snowboarding 
-    + ', man you must know me so well already. If you want this to be the end of the random questions, then answer Yes or No.');
+var guessNumber = prompt ( snowboarding + ', man you must know me so well. Now lets try something different, can you guess what my favorite number is?');
+console.log (guessNumber);
+
+var i = 4;
+var number = 14;
+
+for (i = 0; i < 4; i++){
+    console.log(i);
+    if (number < guessNumber) {
+        guessNumber = prompt('You\'ve guessed to high!');
+        continue;
+    } else if (number > guessNumber){
+        guessNumber = prompt ('You\'ve guessed too low!');
+        continue;
+    } alert('Good Job!');
+    break;
+}
+
+var livedCountries = prompt (guessNumber + ', well done! Can you guess you guess a country I have lived in besides the US? I\'ll give you a hint, there mostly in Asia.');
+console.log(livedCountries);
+
+var countriesGuess = ['Japan', 'Hong Kong', 'Korea'];
+
+for (var i = 0; i < countriesGuess.length; i++){
+    console.log(i);
+    if (countriesGuess[i] === livedCountries){
+    livedCountries = prompt('Correct! Good job!');
+    continue;
+}else{
+    alert('Sorry try again');
+    break;
+  }
+}
+
+var end = prompt ('If you want this to be the end of the random questions, then answer Yes or No.');
 console.log (end);
 
 if (end === 'y' || end === 'Y' || end === 'yes' || end === 'Yes'){
