@@ -13,6 +13,7 @@ function name() {
     }
 }
 
+<<<<<<< HEAD
 name();
 
 
@@ -31,6 +32,40 @@ while (lowerCaseDog !== 'dogs') {
 
 var drawing = prompt(', very good. Now can you try to guess what my favorite hobby is? I\'ll give you a hint, It has to do with a pen and paper.');
 console.log(drawing);
+=======
+function intro() {
+    var name = prompt ('Who do you think I am?');
+    console.log (name);
+
+    var lowerCaseName = name.toLowerCase();
+    console.log (lowerCaseName);
+
+    while (lowerCaseName !== 'brandyn'){
+        name = prompt ('Who do you think I am?');
+        lowerCaseName = name.toLowerCase();
+    }
+}
+
+intro();
+
+function dog1() {
+    var dog = prompt('Brandyn, very good. Yes my name is Brandyn, can you guess what my favorite animal is? I\'ll give you hint, it has a tail.');
+    console.log(dog);
+    var lowerCaseDog = dog.toLowerCase();
+    console.log(lowerCaseDog);
+
+    while (lowerCaseDog !== 'dogs') {
+        dog = prompt('Can you guess my favorite animal?');
+        lowerCaseDog = dog.toLowerCase();
+    }
+}
+
+dog1();
+
+function drawing() {
+var drawing = prompt ('Dog, very good. Now can you try to guess what my favorite hobby is? I\'ll give you a hint, It has to do with a pen and paper.');
+console.log (drawing);
+>>>>>>> dc050a24c30a63b196a67aef0efe7518fed91893
 
 var lowerCaseDrawing = drawing.toLowerCase();
 console.log(lowerCaseDrawing);
@@ -39,9 +74,17 @@ while (lowerCaseDrawing !== 'drawing') {
     drawing = prompt('Can you guess my favorite hobby?');
     lowerCaseDrawing = drawing.toLowerCase();
 }
+}
+drawing();
 
+<<<<<<< HEAD
 var snowboarding = prompt(', your doing great. I wonder if you might know my favorite sport to do outside? I\'ll give you a hint, it has to do with the snow.');
 console.log(snowboarding);
+=======
+function snowboarding() {
+var snowboarding = prompt ('Dog, your doing great. I wonder if you might know my favorite sport to do outside? I\'ll give you a hint, it has to do with the snow.');
+console.log (snowboarding);
+>>>>>>> dc050a24c30a63b196a67aef0efe7518fed91893
 
 var lowerCaseSnowboarding = snowboarding.toLowerCase();
 console.log(lowerCaseSnowboarding);
@@ -50,9 +93,18 @@ while (lowerCaseSnowboarding !== 'snowboarding') {
     snowboarding = prompt('What is my favorite sport to do outside?');
     lowerCaseSnowboarding = snowboarding.toLowerCase();
 }
+}
 
+<<<<<<< HEAD
 var guessNumber = prompt(snowboarding + ', man you must know me so well. Now lets try something different, can you guess what my favorite number is?');
 console.log(guessNumber);
+=======
+snowboarding();
+
+function number() {
+var guessNumber = prompt ('Snowboarding, man you must know me so well. Now lets try something different, can you guess what my favorite number is?');
+console.log (guessNumber);
+>>>>>>> dc050a24c30a63b196a67aef0efe7518fed91893
 
 var i = 4;
 var number = 14;
@@ -68,6 +120,8 @@ for (i = 0; i < 4; i++) {
     } alert('Good Job!');
     break;
 }
+}
+number();
 
 var livedCountries = prompt(guessNumber + ', well done! Can you guess you guess a country I have lived in besides the US? I\'ll give you a hint, there mostly in Asia.');
 console.log(livedCountries);
