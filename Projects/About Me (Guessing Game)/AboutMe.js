@@ -1,6 +1,9 @@
 'use strict'
+
+var globalScore = 0;
+
 function intro() {
-    var name = prompt ('Who do you think I am?');
+    var name = prompt ('What is my name?');
     console.log (name);
 
     var lowerCaseName = name.toLowerCase();
@@ -9,6 +12,7 @@ function intro() {
     while (lowerCaseName !== 'brandyn'){
         name = prompt ('Who do you think I am?');
         lowerCaseName = name.toLowerCase();
+        globalScore++;
     }
 }
 
@@ -17,16 +21,27 @@ intro();
 function dog1() {
     var dog = prompt('Brandyn, very good. Yes my name is Brandyn, can you guess what my favorite animal is? I\'ll give you hint, it has a tail.');
     console.log(dog);
+
     var lowerCaseDog = dog.toLowerCase();
     console.log(lowerCaseDog);
-
-    while (lowerCaseDog !== 'dogs') {
+  
+    for (var j = 0; j < 5; j++) {
+      if (j > 0) {
+        lowerCaseDog = prompt('Incorrect, please try again!').toLowerCase();
+        console.log('incorrect', lowerCaseDog);
+      }
+      if (lowerCaseDog === 'dogs') {
         dog = prompt('Can you guess my favorite animal?');
         lowerCaseDog = dog.toLowerCase();
-    }
-}
-
-dog1();
+        j = 5
+        globalScore++;
+        console.log('dogs correct', globalScore)
+        break;
+      }
+    } 
+  }
+  
+  dog1();
 
 function drawing() {
 var drawing = prompt ('Dog, very good. Now can you try to guess what my favorite hobby is? I\'ll give you a hint, It has to do with a pen and paper.');
@@ -35,11 +50,23 @@ console.log (drawing);
 var lowerCaseDrawing = drawing.toLowerCase();
 console.log(lowerCaseDrawing);
 
-while (lowerCaseDrawing !== 'drawing') {
-    drawing = prompt('Can you guess my favorite hobby?');
-    lowerCaseDrawing = drawing.toLowerCase();
-  }
+for (var j = 0; j < 5; j++) {
+    if (j > 0) {
+      lowerCaseDrawing = prompt('Incorrect, please try again!').toLowerCase();
+      console.log('incorrect', lowerCaseDrawing);
+    }
+    if (lowerCaseDrawing === 'drawing') {
+      drawing = prompt('Can you guess my favorite animal?');
+      lowerCaseDrawing = drawing.toLowerCase();
+      j = 5
+      globalScore++;
+      console.log('drawing correct', globalScore)
+      break;
+    }
+  } 
+        
 }
+
 drawing();
 
 function snowboarding() {
@@ -49,10 +76,20 @@ console.log (snowboarding);
 var lowerCaseSnowboarding = snowboarding.toLowerCase();
 console.log(lowerCaseSnowboarding);
 
-while (lowerCaseSnowboarding !== 'snowboarding') {
-    snowboarding = prompt('What is my favorite sport to do outside?');
-    lowerCaseSnowboarding = snowboarding.toLowerCase();
-  }
+for (var j = 0; j < 5; j++) {
+    if (j > 0) {
+      lowerCaseSnowboarding = prompt('Incorrect, please try again!').toLowerCase();
+      console.log('incorrect', lowerCaseSnowboarding);
+    }
+    if (lowerCaseSnowboarding === 'snowboarding') {
+      snowboarding = prompt('Can you guess my favorite animal?');
+      lowerCaseSnowboarding = snowboarding.toLowerCase();
+      j = 5
+      globalScore++;
+      console.log('snowboarding correct', globalScore)
+      break;
+    }
+  }  
 }
 
 snowboarding();
@@ -71,6 +108,7 @@ for (i = 0; i < 4; i++) {
         continue;
     } else if (number > guessNumber) {
         guessNumber = prompt('You\'ve guessed too low!');
+        globalScore++;
         continue;
     } alert('Good Job!');
     break;
@@ -84,17 +122,18 @@ console.log(livedCountries);
 
 var countriesGuess = ['Japan', 'Hong Kong', 'Korea'];
 
-for (var j = 0; j < 6; i++) {
+for (var j = 0; j < 5; j++) {
     for (var i = 0; i < countriesGuess.length; i++){
         if(countriesGuess[i].toLowerCase() === livedCountries.toLowerCase()){
             console.log('item found', countriesGuess[i]);
             alert ('Correct!: All possible answers are, Japan, Korea, and Hong Kong.');
             j=6
+            globalScore++;
             break;
         }
         
     }
-    if(j < 6){
+    if(j < 5){
         livedCountries = prompt('Incorrect, please try again!');
         console.log(livedCountries);
     }
@@ -117,30 +156,4 @@ if (end === 'y' || end === 'Y' || end === 'yes' || end === 'Yes') {
 
 end();
 
-function returnScore(){
-    alert('Your score is ' + getScore() + '/7')
-    var userInput = [name, dogs, drawing, snowboarding, guessNumber, livedCountries, end];
-var answers = ['Brandyn', 'Dogs', 'Drawing', 'snowboarding', '14', 'Japan', 'Korea', 'Hong Kong', 'Yes']
-
-function getScore() {
-     var score = 0;
-     var numQuestions = 7;
-     var form = document.getElementById('form');
-
-
-     for (var i = 0; i < numQuestions; i++) {
-          if (userInput[i] == answers[i]) {
-               score += 1;
-          } else {
-               score += 0;
-          }
-
-     }
-     return score;
-} 
-
-
-
-}
-
-returnScore();
+var score = alert('you got: ' + globalScore + '/7 right.');
